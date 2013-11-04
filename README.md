@@ -1,0 +1,4 @@
+linear
+======
+
+Some linear structures.
