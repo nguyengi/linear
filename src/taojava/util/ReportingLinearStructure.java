@@ -66,11 +66,11 @@ public class ReportingLinearStructure<T> implements LinearStructure<T> {
 
     @Override
     public void put(T val) throws Exception {
-        pen.print(prefix + "put(" + val.toString() + ") ");
+        pen.print(prefix + "put(" + val + ") ");
         try {
             ls.put(val);
         } catch (Exception e) {
-            pen.println("[FAILED: " + e.toString() + "]");
+            pen.println("[FAILED: " + e + "]");
         } // try/catch
         pen.println("OK");
     } // put(T)
@@ -80,10 +80,10 @@ public class ReportingLinearStructure<T> implements LinearStructure<T> {
         pen.print(prefix + "get() = ");
         try {
             T result = ls.get();
-            pen.println(result.toString());
+            pen.println(result);
             return result;
         } catch (Exception e) {
-            pen.println("[FAILED: " + e.toString() + "]");
+            pen.println("[FAILED: " + e + "]");
             return null;
         } // try/catch
     } // get()
@@ -93,10 +93,10 @@ public class ReportingLinearStructure<T> implements LinearStructure<T> {
         pen.print(prefix + "peek() = ");
         try {
             T result = ls.peek();
-            pen.println(result.toString());
+            pen.println(result);
             return result;
         } catch (Exception e) {
-            pen.println("[FAILED: " + e.toString() + "]");
+            pen.println("[FAILED: " + e + "]");
             return null;
         } // try/catch
     } // peek()
@@ -138,7 +138,7 @@ public class ReportingLinearStructure<T> implements LinearStructure<T> {
            try {
              pen.print(val + " ");
            } catch (Exception e) {
-             pen.print("[" + e.toString() + "] ");
+             pen.print("[" + e + "] ");
            } // try/catch
         } // for
         pen.println();
