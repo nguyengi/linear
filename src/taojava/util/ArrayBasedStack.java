@@ -29,15 +29,15 @@ public class ArrayBasedStack<T> implements Stack<T> {
     // +--------------+
 
     /**
-     * Create a new stack that holds N elements.
+     * Create a new stack that holds up to capacity elements.
      */
-    @SuppressWarnings({"unchecked"})
-    public ArrayBasedStack(int size) throws Exception {
-        if (size <= 0) {
-            throw new Exception("Stacks must have a positive size.");
-        } // if (size <= 0)
-        this.values = (T[]) new Object[size];
-        size = 0;
+    @SuppressWarnings({"unchecked"})    // Handle array casting
+    public ArrayBasedStack(int capacity) throws Exception {
+        if (capacity <= 0) {
+            throw new Exception("Stacks must have a positive capacity.");
+        } // if (capacity <= 0)
+        this.values = (T[]) new Object[capacity];
+        this.size = 0;
     } // ArrayBasedStack(int)
 
     // +-------------------------+-----------------------------------------
@@ -140,7 +140,7 @@ class ArrayBasedStackIterator<T> implements Iterator<T> {
     @Override
     public boolean hasNext() {
         return (i > 0);
-    } // hasNext9)
+    } // hasNext()
 
     @Override
     public void remove() throws UnsupportedOperationException {
