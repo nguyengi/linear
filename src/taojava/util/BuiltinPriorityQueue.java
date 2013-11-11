@@ -6,6 +6,8 @@ import java.util.NoSuchElementException;
 
 /**
  * Priority queues implemented with the standard Java Priority Queues.
+ * (I'd call this an adapter class, but it's implemented by delegating
+ * all of the methods.)
  *
  * @author Samuel A. Rebelsky
  * @author Your Name Here
