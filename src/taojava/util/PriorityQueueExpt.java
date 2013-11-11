@@ -3,11 +3,12 @@ package taojava.util;
 import java.util.Comparator;
 
 /**
- * A really simple experiment with ArrayBasedPriorityQueues.
+ * Simple experiments with various implementations of priority queues.
  *
  * @author Samuel A. Rebelsky.
  */
-public class ArrayBasedPriorityQueueExpt {
+public class PriorityQueueExpt {
+
     /**
      * Do all the work.  (Well, make the helpers do all the work.)
      */
@@ -28,9 +29,15 @@ public class ArrayBasedPriorityQueueExpt {
             } // compare(String,String)
         }; // new Comparator<String>
 
+        PriorityQueue<String> pq;
+        // Uncomment one of the following to choose the kind of
+        // priority queue.
+        pq = new BuiltinPriorityQueue<String>(8, cs);
+        // pq = new ArrayBasedPriorityQueue<String>(8, cs);
+
         ReportingLinearStructure<String> expt = 
-                new ReportingLinearStructure<String>(
-                new ArrayBasedPriorityQueue<String>(8, cs), "expt.");
+                new ReportingLinearStructure<String>(pq, "expt");
+
         // Put in a few values, then remove two
         expt.isEmpty();
         expt.put("one");
@@ -83,4 +90,4 @@ public class ArrayBasedPriorityQueueExpt {
  */
 
     } // main(String[])
-} // class ArrayBasedPriorityQueueExpt
+} // class PriorityQueueExpt
