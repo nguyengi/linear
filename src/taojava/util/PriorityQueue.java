@@ -35,7 +35,7 @@ public interface PriorityQueue<T> extends LinearStructure<T> {
      *   The structure contains one fewer copy of val.
      * @post
      *   For all values, v, in the queue,
-     *     comparator().compare(val, v) >= 0
+     *     comparator().compare(val, v) <= 0
      * @exception Exception
      *   If the structure is empty.
      */
@@ -50,7 +50,7 @@ public interface PriorityQueue<T> extends LinearStructure<T> {
      *   !this.isEmpty()
      * @post
      *   For all values, v, in the queue,
-     *     comparator().compare(val, v) >= 0
+     *     comparator().compare(val, v) <= 0
      * @exception Exception
      *   If the structure is empty.
      */
