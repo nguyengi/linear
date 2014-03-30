@@ -12,69 +12,84 @@ import java.util.NoSuchElementException;
  * @author Samuel A. Rebelsky
  * @author Your Name Here
  */
-public class BuiltinPriorityQueue<T> implements PriorityQueue<T> {
-    // +--------+----------------------------------------------------------
-    // | Fields |
-    // +--------+
+public class BuiltinPriorityQueue<T>
+    implements
+      PriorityQueue<T>
+{
+  // +--------+----------------------------------------------------------
+  // | Fields |
+  // +--------+
 
-    /**
-     * The underlying priority queue.
-     */
-    java.util.PriorityQueue<T> pq;
-    
+  /**
+   * The underlying priority queue.
+   */
+  java.util.PriorityQueue<T> pq;
 
-    // +--------------+----------------------------------------------------
-    // | Constructors |
-    // +--------------+
+  // +--------------+----------------------------------------------------
+  // | Constructors |
+  // +--------------+
 
-    /**
-     * Create a new priority queue that holds up to capacity elements
-     * and uses order to compare elements.
-     */
-    public BuiltinPriorityQueue(int capacity, Comparator<T> order) 
-            throws Exception {
-        this.pq = new java.util.PriorityQueue<T>(capacity, order);
-    } // BuiltinPriorityQueue(int capacity)
+  /**
+   * Create a new priority queue that holds up to capacity elements
+   * and uses order to compare elements.
+   */
+  public BuiltinPriorityQueue(int capacity, Comparator<T> order)
+                                                                throws Exception
+  {
+    this.pq = new java.util.PriorityQueue<T>(capacity, order);
+  } // BuiltinPriorityQueue(int capacity)
 
-    // +------------------------+------------------------------------------
-    // | Priority Queue Methods |
-    // +------------------------+
+  // +------------------------+------------------------------------------
+  // | Priority Queue Methods |
+  // +------------------------+
 
-    @Override
-    public boolean isEmpty() {
-        return pq.size() <= 0;
-    } // isEmpty()
+  @Override
+  public boolean isEmpty()
+  {
+    return pq.size() <= 0;
+  } // isEmpty()
 
-    @Override
-    public boolean isFull() {
-        // It looks like the standard ones don't fill
-        return false;
-    } // isFull()
+  @Override
+  public boolean isFull()
+  {
+    // It looks like the standard ones don't fill
+    return false;
+  } // isFull()
 
-    @Override
-    public void put(T val) throws Exception {
-        pq.add(val);
-    } // put(T)
+  @Override
+  public void put(T val)
+    throws Exception
+  {
+    pq.add(val);
+  } // put(T)
 
-    @Override
-    public T get() throws Exception {
-        return (T) pq.remove();
-    }  // get(T)
+  @Override
+  public T get()
+    throws Exception
+  {
+    return (T) pq.remove();
+  } // get(T)
 
-    @Override
-    public T peek() throws Exception {
-        return (T) pq.peek();
-    } // peek()
+  @Override
+  public T peek()
+    throws Exception
+  {
+    return (T) pq.peek();
+  } // peek()
 
-    @Override
-    @SuppressWarnings({"unchecked"})    // Handle different forms of comparator
-    public Comparator<T> comparator() {
-        return (Comparator<T>) pq.comparator();
-    } // comparator()
+  @Override
+  @SuppressWarnings({ "unchecked" })
+  // Handle different forms of comparator
+    public
+    Comparator<T> comparator()
+  {
+    return (Comparator<T>) pq.comparator();
+  } // comparator()
 
-    @Override
-    public Iterator<T> iterator() {
-        return pq.iterator();
-    } // iterator()
+  @Override
+  public Iterator<T> iterator()
+  {
+    return pq.iterator();
+  } // iterator()
 
 } // class BuiltinPriorityQueue<T>
