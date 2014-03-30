@@ -10,8 +10,7 @@ import java.util.NoSuchElementException;
  * @author Your Name Here
  */
 public class ArrayBasedStack<T>
-    implements
-      Stack<T>
+    implements Stack<T>
 {
   // +--------+----------------------------------------------------------
   // | Fields |
@@ -118,8 +117,7 @@ public class ArrayBasedStack<T>
 } // ArrayBasedStack<T>
 
 class ArrayBasedStackIterator<T>
-    implements
-      Iterator<T>
+    implements Iterator<T>
 {
   // +--------+----------------------------------------------------------
   // | Fields |

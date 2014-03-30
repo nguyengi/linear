@@ -9,8 +9,7 @@ import java.util.Iterator;
  * @author Samuel A. Rebelsky
  */
 public interface LinearStructure<T>
-    extends
-      Iterable<T>
+    extends Iterable<T>
 {
   /**
    * Add an element to the structure.

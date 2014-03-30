@@ -10,8 +10,7 @@ import java.util.NoSuchElementException;
  * @author Your Name Here
  */
 public class LinkedStack<T>
-    implements
-      Stack<T>
+    implements Stack<T>
 {
   // +--------+----------------------------------------------------------
   // | Fields |
@@ -107,8 +106,7 @@ public class LinkedStack<T>
 } // LinkedStack<T>
 
 class LinkedStackIterator<T>
-    implements
-      Iterator<T>
+    implements Iterator<T>
 {
   // +--------+----------------------------------------------------------
   // | Fields |

@@ -10,8 +10,7 @@ import java.util.NoSuchElementException;
  * @author Your Name Here
  */
 public class ArrayBasedQueue<T>
-    implements
-      Queue<T>
+    implements Queue<T>
 {
   // +--------+----------------------------------------------------------
   // | Fields |
@@ -146,8 +145,7 @@ public class ArrayBasedQueue<T>
 } // class ArrayBasedQueue<T>
 
 class ArrayBasedQueueIterator<T>
-    implements
-      Iterator<T>
+    implements Iterator<T>
 {
   // +--------+----------------------------------------------------------
   // | Fields |

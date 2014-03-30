@@ -13,8 +13,7 @@ import java.util.NoSuchElementException;
  * @author Your Name Here
  */
 public class BuiltinPriorityQueue<T>
-    implements
-      PriorityQueue<T>
+    implements PriorityQueue<T>
 {
   // +--------+----------------------------------------------------------
   // | Fields |
