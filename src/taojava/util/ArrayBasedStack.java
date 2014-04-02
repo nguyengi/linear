@@ -75,8 +75,8 @@ public class ArrayBasedStack<T>
       {
         throw new Exception("full");
       } // if full
-    // STUB
-    this.size++;
+    // add val to stack and then increment size.
+    this.values[this.size++] = val;
   } // put(T)
 
   @Override
@@ -87,7 +87,10 @@ public class ArrayBasedStack<T>
       {
         throw new Exception("empty");
       } // if empty
-    return values[--size];
+    T temp = values[--this.size];
+    // make the current value null.
+    values[this.size] = null;
+    return temp;
   } // get()
 
   @Override

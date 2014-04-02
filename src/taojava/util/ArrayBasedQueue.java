@@ -66,7 +66,7 @@ public class ArrayBasedQueue<T>
   @Override
   public boolean isFull()
   {
-    return this.back() >= this.values.length;
+    return this.size >= this.values.length;
   } // isFull()
 
   @Override
@@ -92,6 +92,8 @@ public class ArrayBasedQueue<T>
     // Grab and clear the element at the front of the queue
     T result = this.values[this.front];
     this.values[this.front++] = null;
+    if (this.front == this.values.length)
+      this.front = 0;
     // We're removing an element, so decrement the size
     --this.size;
     // And we're done
@@ -139,7 +141,7 @@ public class ArrayBasedQueue<T>
    */
   int back()
   {
-    return this.size;
+    return (this.size + this.front) % this.values.length;
   } // back()
 
 } // class ArrayBasedQueue<T>

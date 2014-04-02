@@ -24,6 +24,7 @@ public class ArrayBasedQueueExpt
     expt.peek();
     expt.put("c");
     expt.peek();
+    expt.put("d");
     expt.get();
     expt.peek();
     expt.get();
